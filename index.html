@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Suhu</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h2>Masukkan suhu derajat Celsius (°C)</h2>
+    <label for="celsius">Celsius (°C):</label>
+    <input type="text" id="celsius" placeholder="Masukkan suhu dalam Celsius">
+
+    <div>
+        <button class="convert-btn" onclick="convertToFahrenheit()">Konversi</button>
+        <button class="reset-btn" onclick="resetFields()">Reset</button>
+        <button class="reverse-btn" onclick="reverseConversion()">Reverse</button>
+    </div>
+
+    <label for="fahrenheit">Fahrenheit (°F):</label>
+    <textarea id="fahrenheit" rows="1" readonly></textarea>
+
+    <p id="calculation"></p>
+
+    <h3>Cara Konversi Dari Celsius (°C) ke Fahrenheit (°F)</h3>
+    <p>
+        Suhu <em>S</em> dalam derajat Fahrenheit (°F) sama dengan suhu <em>S</em> dalam derajat Celsius (°C) kali <strong>9/5</strong> tambah <strong>32</strong>.
+    </p>
+    <p><strong>Rumus:</strong> <em>S</em>(°F) = (<em>S</em>(°C) × 9/5) + 32</p>
+    <p>atau</p>
+    <p><em>S</em>(°F) = (<em>S</em>(°C) × 1.8) + 32</p>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
