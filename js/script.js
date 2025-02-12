@@ -17,6 +17,8 @@ function resetFields() {
     document.getElementById('lblHasil').innerText = 'Fahrenheit (°F):';
     document.getElementById('sectionCtoF').style.display = 'block';
     document.getElementById('sectionFtoC').style.display = 'none';
+    document.getElementById('introCtoF').style.display = 'block';
+    document.getElementById('introFtoC').style.display = 'none';
 }
 
 function emptyFields() {
@@ -32,12 +34,15 @@ function reverseConversion() {
         document.getElementById('lblHasil').innerText = 'Celsius (°C):';
         document.getElementById('sectionCtoF').style.display = 'none';
         document.getElementById('sectionFtoC').style.display = 'block';
+        document.getElementById('introCtoF').style.display = 'none';
+        document.getElementById('introFtoC').style.display = 'block';
     } else {
         document.getElementById('lblAwal').innerText = 'Celsius (°C):';
         document.getElementById('lblHasil').innerText = 'Fahrenheit (°F):';
         document.getElementById('sectionCtoF').style.display = 'block';
         document.getElementById('sectionFtoC').style.display = 'none';
-        
+        document.getElementById('introCtoF').style.display = 'block';
+        document.getElementById('introFtoC').style.display = 'none';
     }
 }
 
