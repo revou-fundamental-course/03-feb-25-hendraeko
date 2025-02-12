@@ -18,7 +18,7 @@
         <section>
             <form id="konversi-suhu">
                 <label id="lblAwal">Celsius (°C):</label>
-                <input type="text" id="txtAwal">
+                <input type="text" id="txtAwal" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Masukkan angka">
             </form>
         </section>
         <section>
