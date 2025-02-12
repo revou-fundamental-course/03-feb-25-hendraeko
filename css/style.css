@@ -36,6 +36,9 @@ button {
     cursor: pointer;
     color: #fff;
 }
+em {
+    font-size: 20px; /* Sesuaikan ukuran font */
+}
 .convert-btn { background-color: #007bff; }
 .reset-btn { background-color: #6c757d; }
 .reverse-btn { background-color: #28a745; }
