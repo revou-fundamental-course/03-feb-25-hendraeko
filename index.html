@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Konversi Suhu</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"> <!-- Import File CSS -->
 </head>
 <body>
     <h1>Konversi Suhu</h1>
     <main>
-        <section id="introCtoF">
+        <section id="introCtoF"> <!-- Ini adalah section untuk introduction khusus ketika konversi dari Celsius ke Fahrenheit -->
             <p>Masukkan suhu dalam derajat Celsius (°C) ke kotak di bawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk derajat Fahrenheit (°F).</p>
         </section>
-        <section id="introFtoC" style="display: none;">
+        <section id="introFtoC" style="display: none;"> <!-- Ini adalah section untuk introduction khusus ketika konversi dari Fahrenheit ke Celsius -->
             <p>Masukkan suhu dalam derajat Fahrenheit (°F) ke kotak di bawah, lalu klik tombol Konversi untuk mendapatkan hasil konversi dalam bentuk derajat Celsius (°C).</p>
         </section>
         <section>
-            <form id="konversi-suhu">
+            <form id="konversi-suhu"> <!-- Ini adalah form untuk input suhu, pada awal akan di set ke Celsius ke Fahrenheit -->
                 <label id="lblAwal">Celsius (°C):</label>
                 <input type="text" id="txtAwal" oninput="this.value = this.value.replace(/[^0-9]/g, '')" placeholder="Masukkan angka">
             </form>
@@ -24,7 +24,7 @@
         <section>
             <div>
                 <button class="convert-btn" onclick="convertSuhu()">Konversi</button>
-                <button class="reset-btn" onclick="resetFields()">Reset</button>
+                <button class="reset-btn" onclick="resetAll()">Reset</button>
                 <button class="reverse-btn" onclick="reverseConversion()">Reverse</button>
             </div>
         </section>
@@ -39,7 +39,7 @@
                 <input type="text" id="calculation" readonly>
             </div>
         </section>
-        <section id="sectionCtoF">
+        <section id="sectionCtoF"> <!-- Section untuk penjelasan rumus konversi dari Celsius ke Fahrenheit -->
             <header>
                 <h3>Cara Konversi dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3>
             </header>
@@ -50,7 +50,7 @@
             <p>atau</p>
             <p><em>S</em><sub>(°F)</sub> = (<em>S</em><sub>(°C)</sub> × 1.8) + 32</p>
         </section>
-        <section id="sectionFtoC" style="display: none;">
+        <section id="sectionFtoC" style="display: none;"> <!-- Section untuk penjelasan rumus konversi dari Fahrenheit ke Celsius -->
             <header>
                 <h3>Cara Konversi dari Fahrenheit (&deg;F) ke Celcius (&deg;C)</h3>
             </header>
@@ -63,7 +63,7 @@
         </section>
 
     </main>
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> <!-- Ini adalah untuk import file script js -->
 
 </body>
 </html>

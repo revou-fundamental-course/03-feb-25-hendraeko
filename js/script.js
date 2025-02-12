@@ -1,3 +1,4 @@
+// fungsi untuk merubah suhu dari Celsius ke Fahrenheit
 function convertToFahrenheit() {
     const celsius = document.getElementById('txtAwal').value;
     if (!isNaN(celsius) && celsius !== '') {
@@ -9,10 +10,33 @@ function convertToFahrenheit() {
     }
 }
 
-function resetFields() {
+// fungsi untuk merubah suhu dari Fahrenheit ke Celsius
+function convertToCelsius() {
+    const fahrenheit = document.getElementById('txtAwal').value;
+    if (!isNaN(fahrenheit) && fahrenheit !== '') {
+        const celsius = (parseFloat(fahrenheit) - 32) * 5 / 9;
+        document.getElementById('txtHasil').value = celsius.toFixed(2);
+        document.getElementById('calculation').value = `${fahrenheit}°F - 32 × (5/9) = ${celsius.toFixed(2)}°C`;
+    } else {
+        alert('Masukkan suhu yang valid dalam Fahrenheit.');
+    }
+}
+
+// fungsi untuk mereset form
+function resetAll() {
+    emptyFields(); // memanggil fungsi untuk mengosongkan form
+    resetFields(); // memanggil fungsi resetFields
+}
+
+// fungsi untuk mengosongkan form
+function emptyFields() {
     document.getElementById('txtAwal').value = '';
     document.getElementById('txtHasil').value = '';
     document.getElementById('calculation').value = '';
+}
+
+// fungsi untuk mereset form menjadi seperti semula
+function resetFields() {
     document.getElementById('lblAwal').innerText = 'Celsius (°C):';
     document.getElementById('lblHasil').innerText = 'Fahrenheit (°F):';
     document.getElementById('sectionCtoF').style.display = 'block';
@@ -21,12 +45,7 @@ function resetFields() {
     document.getElementById('introFtoC').style.display = 'none';
 }
 
-function emptyFields() {
-    document.getElementById('txtAwal').value = '';
-    document.getElementById('txtHasil').value = '';
-    document.getElementById('calculation').value = '';
-}
-
+// fungsi untuk membalikkan form
 function reverseConversion() {
     emptyFields();
     if (document.getElementById('lblAwal').innerText === 'Celsius (°C):') {
@@ -46,21 +65,11 @@ function reverseConversion() {
     }
 }
 
+// fungsi untuk merubah suhu
 function convertSuhu() {
     if (document.getElementById('lblAwal').innerText === 'Celsius (°C):') {
-        convertToFahrenheit();
+        convertToFahrenheit(); // memanggil fungsi untuk merubah suhu dari Celsius ke Fahrenheit
     } else {
-        convertToCelsius();
-    }
-}
-
-function convertToCelsius() {
-    const fahrenheit = document.getElementById('txtAwal').value;
-    if (!isNaN(fahrenheit) && fahrenheit !== '') {
-        const celsius = (parseFloat(fahrenheit) - 32) * 5 / 9;
-        document.getElementById('txtHasil').value = celsius.toFixed(2);
-        document.getElementById('calculation').value = `${fahrenheit}°F - 32 × (5/9) = ${celsius.toFixed(2)}°C`;
-    } else {
-        alert('Masukkan suhu yang valid dalam Fahrenheit.');
+        convertToCelsius(); // memanggil fungsi untuk merubah suhu dari Fahrenheit ke Celsius
     }
 }
